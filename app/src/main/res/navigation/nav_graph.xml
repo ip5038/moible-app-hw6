@@ -9,5 +9,14 @@
         android:id="@+id/gameBoardFragment"
         android:name="com.mobileapp.hw06.GameBoardFragment"
         android:label="fragment_game_board"
-        tools:layout="@layout/fragment_game_board" />
+        tools:layout="@layout/fragment_game_board" >
+        <action
+            android:id="@+id/action_gameBoardFragment_to_colorSetting"
+            app:destination="@id/colorSetting" />
+    </fragment>
+    <fragment
+        android:id="@+id/colorSetting"
+        android:name="com.mobileapp.hw06.ColorSetting"
+        android:label="fragment_color_setting"
+        tools:layout="@layout/fragment_color_setting" />
 </navigation>

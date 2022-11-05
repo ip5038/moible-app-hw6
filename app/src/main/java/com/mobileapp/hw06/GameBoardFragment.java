@@ -3,6 +3,7 @@ package com.mobileapp.hw06;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +28,13 @@ public class GameBoardFragment extends Fragment implements View.OnClickListener 
         newGameButton = binding.newGameButton;
         setUpGameBoard();
 
+        binding.newGameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_gameBoardFragment_to_colorSetting);
+            }
+        });
+
         return view;
     }
 
@@ -37,7 +45,7 @@ public class GameBoardFragment extends Fragment implements View.OnClickListener 
         int btnIdLength = btnId.length();
         int row = btnId.charAt(btnIdLength - 2) - 48;
         int col = btnId.charAt(btnIdLength - 1) - 48;
-        
+        System.out.println("Row: " + row + ", Col: " + col);
     }
 
     private void setUpGameBoard()
