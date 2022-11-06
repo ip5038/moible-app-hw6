@@ -2,8 +2,12 @@
     <string name="app_name">Lights Out</string>
     <string name="movesLabel">Moves:</string>
     <string name="newGameButtonTitle">New Game</string>
-    <string name="aboutMe">Enter your about me info in strings.xml file</string>
-    <string name="helpMsg"></string>
+    <string name="aboutMe">My name is Ishan, and I am a computer science student at UMass Lowell. I will be graduating this Summer 2023.
+        This is verison 1.0 of the game and the goal of the game is to switch off all the lights with as few moves as possible.
+    </string>
+    <string name="helpMsg">The game will start with random number of lights turned on. Click on any light and it
+        will toggle that light and the adjacent lights. To win the game, all lights must be turned off with as
+        few moves as possible. To change the light color, click on the settings icon on top right and choose a new color.</string>
     <string name="settingsTitle">Choose light color</string>
     <string name="redRadioBtn">Red</string>
     <string name="yellowRadioBtn">Yellow</string>
