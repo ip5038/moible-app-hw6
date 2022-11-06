@@ -20,6 +20,9 @@ public class GameOver extends Fragment {
         binding = FragmentGameOverBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
 
+        int numMoves = GameOverArgs.fromBundle(requireArguments()).getMoves();
+        binding.finalMovesTextView.setText("Total number of moves: " + String.valueOf(numMoves));
+
         return view;
     }
 }

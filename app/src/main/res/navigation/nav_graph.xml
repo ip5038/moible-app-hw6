@@ -38,7 +38,11 @@
         android:id="@+id/gameOverFragment"
         android:name="com.mobileapp.hw06.GameOver"
         android:label="fragment_game_over"
-        tools:layout="@layout/fragment_game_over" />
+        tools:layout="@layout/fragment_game_over" >
+        <argument
+            android:name="moves"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/helpFragment"
         android:name="com.mobileapp.hw06.HelpFragment"

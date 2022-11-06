@@ -24,8 +24,6 @@ public class ColorSetting extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentColorSettingBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
-//        String message = ColorSettingArgs.fromBundle(requireArguments()).getColor();
-//        color = new StringBuilder(message).toString();
 
 //        if(color.equals("Purple"))
 //        {

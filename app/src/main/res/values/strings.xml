@@ -3,6 +3,7 @@
     <string name="movesLabel">Moves:</string>
     <string name="newGameButtonTitle">New Game</string>
     <string name="aboutMe">Enter your about me info in strings.xml file</string>
+    <string name="helpMsg"></string>
     <string name="settingsTitle">Choose light color</string>
     <string name="redRadioBtn">Red</string>
     <string name="yellowRadioBtn">Yellow</string>
@@ -11,4 +12,5 @@
     <string name="menuGameTitle">Play</string>
     <string name="menuHelpTitle">Help</string>
     <string name="menuAboutMeTitle">About me</string>
+    <string name="congrats">You won</string>
 </resources>

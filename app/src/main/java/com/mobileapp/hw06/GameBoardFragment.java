@@ -26,6 +26,7 @@ public class GameBoardFragment extends Fragment implements View.OnClickListener 
     private boolean[][] board = {{false, false, false}, {false, false, false}, {false, false, false}};
     private String color;
     private int numMoves;
+    private View view;
 //NavDirections action = GameBoardFragmentDirections.actionGameBoardFragmentToColorSetting(color);
 //                Navigation.findNavController(view).navigate(action);
 
@@ -33,7 +34,7 @@ public class GameBoardFragment extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentGameBoardBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
+        view = binding.getRoot();
         numMoves = 0;
         binding.numMovesTextView.setText(String.valueOf(numMoves));
 
@@ -106,7 +107,8 @@ public class GameBoardFragment extends Fragment implements View.OnClickListener 
 
         updateBoard();
         if(gameWon()) {
-
+            NavDirections action = GameBoardFragmentDirections.actionGameBoardFragmentToGameOverFragment(numMoves);
+            Navigation.findNavController(view).navigate(action);
         }
     }
 
