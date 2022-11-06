@@ -5,6 +5,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.BottomNavigationViewKt;
 import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
                 AppBarConfiguration.Builder(navController.getGraph());
         AppBarConfiguration appBarConfiguration = builder.build();
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        NavigationUI.setupWithNavController(bottomNavigationView, navController);
     }
 
     @Override

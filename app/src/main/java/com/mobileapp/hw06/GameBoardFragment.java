@@ -51,7 +51,10 @@ public class GameBoardFragment extends Fragment implements View.OnClickListener 
         binding.newGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_gameBoardFragment_to_colorSetting);
+                numMoves = 0;
+                binding.numMovesTextView.setText(String.valueOf(numMoves));
+                resetBoard();
+                setUpGameBoard();
             }
         });
 
@@ -164,6 +167,14 @@ public class GameBoardFragment extends Fragment implements View.OnClickListener 
                 else {
                     gameBoard.get(i).get(j).setBackgroundColor(Color.parseColor(color));
                 }
+            }
+        }
+    }
+
+    private void resetBoard() {
+        for(int i = 0; i < board.length; i++) {
+            for(int j = 0; j < board[i].length; j++) {
+                board[i][j] = false;
             }
         }
     }

@@ -8,4 +8,7 @@
     <string name="yellowRadioBtn">Yellow</string>
     <string name="purpleRadioBtn">Purple</string>
     <string name="changeButton">Change</string>
+    <string name="menuGameTitle">Play</string>
+    <string name="menuHelpTitle">Help</string>
+    <string name="menuAboutMeTitle">About me</string>
 </resources>
